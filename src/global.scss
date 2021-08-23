@@ -1,0 +1,62 @@
+// $background-color           :#f6f6f6;
+// $font-color                 :#1b2435;
+// $primary-color              :#4F596C;
+// $primary-color-light        :#C7C7C7;
+// $content-border             :2px solid #e5e5e5;
+// $divider-line               :#798398;
+// $buttom-box-shadow          :0px 4px 20px rgba(0, 0, 0, 0.1);
+// $detail-background-color    :#f6f6f6;
+// $coursework-item-background :#888c93;
+// $nav-list-item-background   :#fff;
+@font-face {
+  font-family: 'Graphie';
+  font-display: swap;
+  src: url('/resources/fonts/Graphie/Graphie-Book.otf');
+  // src: url('/resources/fonts/Graphie/Graphie-SemiBold.otf');
+}
+@font-face {
+  font-family: 'Graphie-SemiBold';
+  font-display: swap;
+  src: url('/resources/fonts/Graphie/Graphie-SemiBold.otf');
+}
+@font-face {
+  font-family: 'Graphie-Bold';
+  src: url('/resources/fonts/Graphie/Graphie-Bold.otf');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Graphie', sans-serif;
+}
+body {
+  background-color: white;
+}
+
+// animations
+.bar1.open {
+  transform: translateY(4px) rotate(45deg);
+}
+.bar3.open {
+  transform: rotate(-45deg);
+}
+.bar2.open {
+  display: none;
+}
+
+.activeLink {
+  color: black !important;
+  font-weight: bold;
+  font-family: 'Graphie-SemiBold' !important;
+  &::after {
+    content: '';
+    height: 5px;
+    width: 204%;
+    background-color: black;
+    position: absolute;
+    border-radius: 12px;
+    left: -50%;
+    margin-top: 22px;
+  }
+}
